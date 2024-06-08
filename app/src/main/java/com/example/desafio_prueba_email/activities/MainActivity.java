@@ -1,4 +1,4 @@
-package com.example.desafio_prueba_email;
+package com.example.desafio_prueba_email.activities;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.desafio_prueba_email.R;
 
 public class MainActivity extends AppCompatActivity {
 
