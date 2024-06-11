@@ -51,12 +51,7 @@ public class FirstFragment extends Fragment {
                 }
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mListener.onButtonClick();
-            }
-        });
+        button.setOnClickListener(v -> mListener.onButtonClick());
 
         return firstBinding.getRoot();
     }
@@ -67,7 +62,7 @@ public class FirstFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener){
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context + " must implement OnFragmentInteractionListener");
         }
     }
 
