@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Desafio-prueba-email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title">Validador de contraseñas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="success">Éxito!</string>
+    <string name="hint_type_password">Escribe una contraseña</string>
+    <string name="button_text">Validar contraseña</string>
+    <string name="successText">
+        Recuerda que una contraseña segura debe cumplir con estas características:\n
+        >Al menos 5 caracteres\n
+        >Al menos una letra mayúscula\n
+        \n
+        Otras características que hacen la contraseña más segura:\n
+        >Al menos 1 caracter especial (.!@#$%^&amp;*)\n
+        >Al menos un número.
+
+
+    </string>
 </resources>
