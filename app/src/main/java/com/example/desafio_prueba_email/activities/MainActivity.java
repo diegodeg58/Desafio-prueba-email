@@ -11,8 +11,12 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.desafio_prueba_email.R;
+import com.example.desafio_prueba_email.databinding.ActivityMainBinding;
+import com.example.desafio_prueba_email.fragments.FirstFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FirstFragment.OnFragmentInteractionListener {
+
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +28,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
     }
 
     private void navigateToSecondFragment() {
-        NavHostFragment navHostFragment =
-                (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        NavHostFragment navHostFragment = (NavHostFragment)
+                getSupportFragmentManager().findFragmentById(R.id.fragment_container);
         NavController navController = navHostFragment.getNavController();
         navController.navigate(R.id.action_firstFragment_to_secondFragment);
+    }
+
+    @Override
+    public void onButtonClick() {
+        navigateToSecondFragment();
     }
 }
